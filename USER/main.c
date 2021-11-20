@@ -39,8 +39,8 @@ void GPIOC13_Init(void){
 	GPIO_InitTypeDef  GPIO_InitStructure;
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);	
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
 	GPIO_Init(GPIOC, &GPIO_InitStructure);	
 	GPIO_ResetBits(GPIOC,GPIO_Pin_13);
 
@@ -56,20 +56,20 @@ void showData(void);
 
 int main(void)
 {	
-	
+	//初始化
+	Init();
 	while(1){
-		
-		Init();
-		
+
+		//获取数据
 		getData();
-		
+		//显示数据
 		showData();
 
 		//开启滚动
 		OLED_WR_Byte(0x2F,OLED_CMD);
 		
 		//延时
-		Delay_1ms(3500);
+		Delay_1ms(3200);
 		//OLED_Clear(0); 
 	}
 	

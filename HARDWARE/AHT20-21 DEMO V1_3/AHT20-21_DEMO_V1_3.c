@@ -60,7 +60,7 @@ void Delay_1ms(uint32_t t)		//延时函数
 //	RCC_APB2PeriphClockCmd(CC_APB2Periph_GPIOB,ENABLE);
 //}
 
-void SDA_Pin_Output_High(void)   //将PB15配置为输出 ， 并设置为高电平， PB15作为I2C的SDA
+void SDA_Pin_Output_High(void)   //将PB7配置为输出 ， 并设置为高电平， PB7作为I2C的SDA
 {
 	GPIO_InitTypeDef  GPIO_InitStruct;
 	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_Out_PP;//推挽输出
@@ -70,7 +70,7 @@ void SDA_Pin_Output_High(void)   //将PB15配置为输出 ， 并设置为高电平， PB15作为
 	GPIO_SetBits(GPIOB,GPIO_Pin_7);
 }
 
-void SDA_Pin_Output_Low(void)  //将P15配置为输出  并设置为低电平
+void SDA_Pin_Output_Low(void)  //将P7配置为输出  并设置为低电平
 {
 
 	GPIO_InitTypeDef  GPIO_InitStruct;

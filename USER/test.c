@@ -66,9 +66,7 @@ void TEST_MainPage(void)
 //for(i=1;i<50;i++)
 //	{
 	
-		GUI_ShowString(28,0,"YuKaguraNe",16,1);//Ó¢ÎÄÐÕÃû
 		GUI_ShowCHinese(20,20,16,"×íÒâØ¼Ç§²ãÃÎ",1);//ÖÐÎÄÐÕÃû
-		GUI_ShowString(20,48,"631807060417",16,1);//Êý×ÖÏêÏ¸
 		delay_ms(100);
 		
 	
