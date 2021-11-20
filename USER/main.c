@@ -69,7 +69,7 @@ int main(void)
 		OLED_WR_Byte(0x2F,OLED_CMD);
 		
 		//延时
-		Delay_1ms(3200);
+		Delay_1ms(3100);
 		//OLED_Clear(0); 
 	}
 	
@@ -135,7 +135,7 @@ void getData(){
 		c1 = CT_data[0]*1000/1024/1024;  //计算得到湿度值c1（放大了10倍）
 		t1 = CT_data[1]*2000/1024/1024-500;//计算得到温度值t1（放大了10倍）
 
-
+		//转为字符串易于显示
 		temp[0]=t1/100+'0';
 		temp[1]=(t1/10)%10+'0';
 		temp[2]='.';
